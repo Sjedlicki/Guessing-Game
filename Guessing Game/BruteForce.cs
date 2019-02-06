@@ -8,17 +8,20 @@ namespace Guessing_Game
 {
     class BruteForce : Guesser
     {
-        public static List<int> number = new List<int>();
-        int x = 100;
+        public int x;
 
-        public BruteForce()
+        public BruteForce(int max)
         {
-
+            this.x = max;
         }
 
         public override int Guess()
         {
-            return x--;
+            if (x >= 1)
+            {
+                return x--;
+            }
+            return x;
         }
     }
 }

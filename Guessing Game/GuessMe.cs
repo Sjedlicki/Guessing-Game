@@ -12,29 +12,28 @@ namespace Guessing_Game
         Guesser player;
         public int max;
         public int attemps = 0;
+        public static int num2 = 0;
 
-
-
-
-        public GuessMe(Guesser player, int max)
+        public GuessMe(Guesser player, int numberToGuess)
         {
             this.player = player;
-            this.max = max;
+            int guess = player.Guess();
 
-            Random r = new Random();
-            int num1 = r.Next(1, max);
-            Play(player.Guess(), num1);
+            Play(numberToGuess, guess);
         }
 
-        public void Play(int guess, int num1)
+
+        public void Play(int num1, int guess)
         {
-            Console.WriteLine($"Number to guess: {num1}");
-            Console.WriteLine($"This is my guess: {guess}");
+            
 
             while (num1 != guess)
-            {
-                Console.WriteLine($"Num1: {num1}");                
-                Console.WriteLine("Testing: " + player.Guess());
+            {               
+                Console.WriteLine($"Number to guess: {num1}");
+                Console.WriteLine($"This is my guess: {guess}");
+                Console.WriteLine($"Num1: {num1}");
+                guess = player.Guess();
+                //Console.WriteLine("Testing: " + player.Guess());
                 Console.ReadKey();
                 attemps++;
             }

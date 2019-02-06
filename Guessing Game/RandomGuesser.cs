@@ -8,16 +8,20 @@ namespace Guessing_Game
 {
     class RandomGuesser : Guesser
     {
-        Random num = new Random();
+        public Random num;
+        public int max;
+        //Random num = new Random();
 
-        public RandomGuesser()
+        public RandomGuesser(Random num, int Max)
         {
-
+            this.num = num;
+            this.max = Max;
         }
 
         public override int Guess()
         {
-            return num.Next(1, 100);
+            int guess = num.Next(1, max);
+            return guess;
         }
     }
 }
