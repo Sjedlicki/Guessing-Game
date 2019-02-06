@@ -1,0 +1,7 @@
+C:\git\Guessing Game\Guessing Game\bin\Debug\Guessing Game.exe.config
+C:\git\Guessing Game\Guessing Game\bin\Debug\Guessing Game.exe
+C:\git\Guessing Game\Guessing Game\bin\Debug\Guessing Game.pdb
+C:\git\Guessing Game\Guessing Game\obj\Debug\Guessing Game.csprojAssemblyReference.cache
+C:\git\Guessing Game\Guessing Game\obj\Debug\Guessing Game.csproj.CoreCompileInputs.cache
+C:\git\Guessing Game\Guessing Game\obj\Debug\Guessing Game.exe
+C:\git\Guessing Game\Guessing Game\obj\Debug\Guessing Game.pdb
