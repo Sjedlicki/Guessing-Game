@@ -8,49 +8,40 @@ namespace Guessing_Game
 {
     class GuessMe
     {
-        
+
         Guesser player;
         public int max;
         public int attemps = 0;
-        
+
+
+
 
         public GuessMe(Guesser player, int max)
         {
             this.player = player;
             this.max = max;
-            Play(player.Guess());
-        }
 
-        public void Play(int guess)
-        {
             Random r = new Random();
             int num1 = r.Next(1, max);
-            //int num2 = r.Next(1, max);
-
-            Console.WriteLine($"Number to guess: {num1}");
-            Console.WriteLine($"This is my guess: {guess}");
-            while (num1 != guess)
-            {
-                player.Guess();
-                Console.WriteLine("Testing: "+player.Guess());
-                
-                attemps++;
-            }
-            Console.WriteLine($"You win: {attemps}");
-            Console.ReadKey();
+            Play(player.Guess(), num1);
         }
 
-        //public bool Correct()
-        //{
-        //    for (int i = 0; i < max; i++)
-        //    {
-        //        if ()
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //    Console.WriteLine(");
-        //    return true;
-        //}
+        public void Play(int guess, int num1)
+        {
+            Console.WriteLine($"Number to guess: {num1}");
+            Console.WriteLine($"This is my guess: {guess}");
+
+            while (num1 != guess)
+            {
+                Console.WriteLine($"Num1: {num1}");                
+                Console.WriteLine("Testing: " + player.Guess());
+                Console.ReadKey();
+                attemps++;
+            }
+
+            Console.WriteLine("Congratulations! You're a WINNER!");
+            Console.WriteLine($"Attempts: {attemps}");
+
+        }
     }
 }
