@@ -8,8 +8,18 @@ namespace Guessing_Game
 {
     abstract class Guesser
     {
-       // public List<string> guess = Enumerable.Range(1, 100).ToString();
+        public static List<int> numberz = new List<int>();
+        public static IEnumerable<int> numbers = Enumerable.Range(1, 100);
+        
+        public Guesser()
+        {
+
+        }
 
         public abstract int Guess();
+
+
+
+
     }
 }

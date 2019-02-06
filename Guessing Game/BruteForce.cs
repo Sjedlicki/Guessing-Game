@@ -8,19 +8,21 @@ namespace Guessing_Game
 {
     class BruteForce : Guesser
     {
-        int i = 100;
+        public static List<int> number = new List<int>();
+        int x = 99;
+
         public BruteForce()
         {
-
+            for (int i = 0; i < 100; i++)
+            {
+                number.Add(i);
+            }
         }
 
         public override int Guess()
         {
-            return i--;
+            return number[x--];
         }
-
-
-
     }
 }
 

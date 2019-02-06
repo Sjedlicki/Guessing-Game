@@ -12,39 +12,43 @@ namespace Guessing_Game
         {
             Guesser g1 = new RandomGuesser();
             Guesser brute = new BruteForce();
-            Random r = new Random();
-            int num = r.Next(1, 100);
-            int guess = r.Next(1, 100);
-            int count = 1;
-            int count2 = 1;
+            //Random r = new Random();
+            //int num = r.Next(1, 100);
+            //int guess = r.Next(1, 100);
+            //int count = 1;
+            //int count2 = 1;
 
             //Console.ReadKey();
+            Console.WriteLine( brute.Guess());
+            GuessMe gm = new GuessMe(brute, 100);
 
-            while (num != guess)
-            {
-                guess = r.Next(1, 100);
-                count++;
-            }
-            Console.WriteLine($"Real number: {num}");
-            Console.WriteLine($"Random Tries: {count}");
 
-            Console.WriteLine(brute.Guess());
-            while (num != brute.Guess())
-            {
-                brute.Guess();
-                count2++;
-            }
-            Console.WriteLine($"Real number {num}");
-            Console.WriteLine($"Brute Force Tries: {count2}");
+            //    while (num != guess)
+            //    {
+            //        guess = r.Next(1, 100);
+            //        count++;
+            //    }
+            //    Console.WriteLine($"Real number: {num}");
+            //    Console.WriteLine($"Random Tries: {count}");
 
-            Console.WriteLine("Press any key to continue");
-            Console.ReadKey();
+            //    Console.WriteLine(brute.Guess());
+            //    while (num != brute.Guess())
+            //    {
+            //        brute.Guess();
+            //        count2++;
+            //    }
+            //    Console.WriteLine($"Real number {num}");
+            //    Console.WriteLine($"Brute Force Tries: {count2}");
+
+            //    Console.WriteLine("Press any key to continue");
+            //    Console.ReadKey();
+            //}
+
+            //public static int GetNumber(int min, int max)
+            //{
+            //    Random r = new Random();
+            //    return r.Next(min, max);
+            //}
         }
-
-        //public static int GetNumber(int min, int max)
-        //{
-        //    Random r = new Random();
-        //    return r.Next(min, max);
-        //}
     }
 }

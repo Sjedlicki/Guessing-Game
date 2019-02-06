@@ -15,7 +15,7 @@ namespace Guessing_Game
 
         public override int Guess()
         {
-            
+            return 1;
         }
     }
 }
