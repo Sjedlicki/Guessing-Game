@@ -8,11 +8,11 @@ namespace Guessing_Game
 {
     class BruteForce : Guesser
     {
-        public int x;
-
-        public BruteForce(int max)
+        //int Max;
+        public BruteForce()
         {
-            this.x = max;
+            //this.Max = Max;
+            //x = Max - 1;
         }
 
         public override int Guess()

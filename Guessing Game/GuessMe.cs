@@ -8,39 +8,45 @@ namespace Guessing_Game
 {
     class GuessMe
     {
+        Guesser Player;
+        //public static List<int> attempted = new List<int>();
+        public static int tries = 0;
+        public int NumberToGuess;
 
-        Guesser player;
-        public int max;
-        public int attemps = 0;
-        public static int num2 = 0;
-
-        public GuessMe(Guesser player, int numberToGuess)
+        public GuessMe(Guesser Player, int numberToGuess)
         {
-            this.player = player;
-            int guess = player.Guess();
+            this.Player = Player;
+            int guess = Player.Guess();
+            this.NumberToGuess = numberToGuess;
 
             Play(numberToGuess, guess);
         }
 
-
-        public void Play(int num1, int guess)
+        public void Play(int numberToGuess, int guess)
         {
-            
+            bool run = true;
+            while (run)
+            {
+                tries++;
+                //Console.ForegroundColor = ConsoleColor.Green;
+                //Console.WriteLine(tries);
+                //Console.ForegroundColor = ConsoleColor.Yellow;
+                //Console.WriteLine(numberToGuess);
+                //Console.ForegroundColor = ConsoleColor.Red;
+                //Console.WriteLine(guess);
+                //Console.ForegroundColor = ConsoleColor.White;
 
-            while (num1 != guess)
-            {               
-                Console.WriteLine($"Number to guess: {num1}");
-                Console.WriteLine($"This is my guess: {guess}");
-                Console.WriteLine($"Num1: {num1}");
-                guess = player.Guess();
-                //Console.WriteLine("Testing: " + player.Guess());
-                Console.ReadKey();
-                attemps++;
+                if (numberToGuess == guess)
+                {
+                    //Console.ForegroundColor = ConsoleColor.Blue;
+                    //Console.WriteLine($"!!!WINNER!!! Guess: {guess} Tries:  {tries}");
+                    run = false;
+                }
+                else if (numberToGuess != guess)
+                {
+                    guess = Player.Guess();                    
+                }
             }
-
-            Console.WriteLine("Congratulations! You're a WINNER!");
-            Console.WriteLine($"Attempts: {attemps}");
-
         }
     }
 }
